@@ -46,3 +46,12 @@ Route::any('/abort', function (\Illuminate\Http\Request $request) {
 // Custom responses
 Route::get('/custom/make', '\App\Http\Controllers\MyCustomController@make');
 Route::get('/custom/json', '\App\Http\Controllers\MyCustomController@json');
+
+// Blade templates
+Route::get('/blade/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/blade/include', function () {
+    return view('home');
+});
